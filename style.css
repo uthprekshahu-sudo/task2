@@ -1,0 +1,247 @@
+/* ---------- Base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  color: #2b2b2b;
+  background-color: #f4f7f6;
+}
+
+/* ---------- Navbar (Flexbox) ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f6e5f;
+  padding: 15px 30px;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background-color: #0c5949;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ---------- Sections ---------- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.section {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  color: #0f6e5f;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+/* ---------- Form ---------- */
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0f6e5f;
+}
+
+input.invalid,
+textarea.invalid {
+  border-color: #d9534f;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+.success {
+  color: #0f6e5f;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+button {
+  background-color: #0f6e5f;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0c5949;
+}
+
+/* ---------- Responsive Grid Layout ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: #eaf4f2;
+  border: 1px solid #d0e6e1;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  font-weight: 600;
+  color: #0f6e5f;
+}
+
+.grid-item small {
+  font-weight: 400;
+  color: #555;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------- To-Do List ---------- */
+.todo-app {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.todo-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input input {
+  flex: 1;
+}
+
+#todoList {
+  list-style: none;
+}
+
+#todoList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eaf4f2;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+#todoList li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+#todoList li span {
+  cursor: pointer;
+  flex: 1;
+}
+
+.delete-btn {
+  background-color: #d9534f;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background-color: #b52b27;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2b2b2b;
+  color: #fff;
+  font-size: 0.9rem;
+}

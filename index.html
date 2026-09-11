@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 2: Intermediate HTML, CSS &amp; JavaScript</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Nav (Flexbox) ===== -->
+  <nav class="navbar">
+    <div class="logo">Task 2 Project</div>
+    <ul class="nav-links">
+      <li><a href="#contact">Contact Form</a></li>
+      <li><a href="#layout">Layout</a></li>
+      <li><a href="#todo">To-Do List</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Intermediate HTML, CSS &amp; JavaScript</h1>
+    <p>A single page demonstrating forms, validation, responsive layout, and DOM manipulation.</p>
+  </header>
+
+  <main>
+
+    <!-- ===== 1 & 2: Contact Form + Validation ===== -->
+    <section id="contact" class="section">
+      <h2>Contact Form</h2>
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" />
+          <span class="error" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" />
+          <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="10-digit phone number" />
+          <span class="error" id="phoneError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
+          <span class="error" id="messageError"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+        <p id="formSuccess" class="success"></p>
+      </form>
+    </section>
+
+    <!-- ===== 3: Responsive Layout (Flexbox + Grid) ===== -->
+    <section id="layout" class="section">
+      <h2>Responsive Content Layout</h2>
+      <div class="grid-container">
+        <div class="grid-item">Card 1<br /><small>Resizes with the grid</small></div>
+        <div class="grid-item">Card 2<br /><small>Resizes with the grid</small></div>
+        <div class="grid-item">Card 3<br /><small>Resizes with the grid</small></div>
+        <div class="grid-item">Card 4<br /><small>Resizes with the grid</small></div>
+        <div class="grid-item">Card 5<br /><small>Resizes with the grid</small></div>
+        <div class="grid-item">Card 6<br /><small>Resizes with the grid</small></div>
+      </div>
+    </section>
+
+    <!-- ===== 4: Dynamic To-Do List ===== -->
+    <section id="todo" class="section">
+      <h2>To-Do List</h2>
+      <div class="todo-app">
+        <div class="todo-input">
+          <input type="text" id="todoInput" placeholder="Add a new task..." />
+          <button id="addTaskBtn">Add</button>
+        </div>
+        <ul id="todoList"></ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Task 2 Project. Built for ApexPlanet Software Pvt Ltd.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
